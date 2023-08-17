@@ -220,6 +220,7 @@ imageWithText(d,t = paste0('x=',d),
               main='table',col=terrain.colors(100))
 ```
 HW #8
+```
 n= 10000 #количество генов 
 k=5 #кол-во образцов
 a = matrix(rnorm(n*k,mean=0, sd=1),nrow=n, ncol=k) #здоровые
@@ -264,6 +265,7 @@ sum(pv[501:n] < pv.bonf) / sum(pv < pv.bonf)  # доля ложно-положи
 
 stat.healthy.mean = apply(m[pv < pv.BH,1:5], 1, mean)
 stat.cancer.mean = apply(m[pv < pv.BH,6:10], 1, mean)
+```
 
 plot(stat.cancer.mean - stat.healthy.mean, type='l')
 
